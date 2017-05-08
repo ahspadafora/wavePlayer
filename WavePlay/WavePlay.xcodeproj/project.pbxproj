@@ -20,6 +20,8 @@
 		04685AA81EB7CFA800528F7A /* WavePlayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AA71EB7CFA800528F7A /* WavePlayUITests.swift */; };
 		04685AB61EB7D0BA00528F7A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AB51EB7D0BA00528F7A /* FirstViewController.swift */; };
 		04685AB81EB7DFC100528F7A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AB71EB7DFC100528F7A /* TabBarController.swift */; };
+		04FD5D211EBD195300D7FFB7 /* AboutWavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */; };
+		04FD5D251EBFF82F00D7FFB7 /* WaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		04685AA91EB7CFA800528F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04685AB51EB7D0BA00528F7A /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ../FirstViewController.swift; sourceTree = "<group>"; };
 		04685AB71EB7DFC100528F7A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWavesViewController.swift; sourceTree = "<group>"; };
+		04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveTableViewCell.swift; path = ../WaveTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,6 @@
 				04685A861EB7CFA300528F7A /* WavePlay */,
 				04685A9B1EB7CFA700528F7A /* WavePlayTests */,
 				04685AA61EB7CFA800528F7A /* WavePlayUITests */,
-				04685A851EB7CFA300528F7A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,14 +115,17 @@
 				04685AA31EB7CFA800528F7A /* WavePlayUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		04685A861EB7CFA300528F7A /* WavePlay */ = {
 			isa = PBXGroup;
 			children = (
+				04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */,
 				04685AB71EB7DFC100528F7A /* TabBarController.swift */,
 				044CB2AF1EBA967900FD55BD /* SettingsNavigationViewController.swift */,
 				044CB2AD1EBA88EF00FD55BD /* FourthViewController.swift */,
+				04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */,
 				044CB2B11EBA99E200FD55BD /* RulesViewController.swift */,
 				044CB2B51EBA9EC400FD55BD /* extensions */,
 				044CB2AB1EBA883200FD55BD /* ThirdViewController.swift */,
@@ -136,6 +142,7 @@
 		04685A9B1EB7CFA700528F7A /* WavePlayTests */ = {
 			isa = PBXGroup;
 			children = (
+				04685A851EB7CFA300528F7A /* Products */,
 				04685A9C1EB7CFA700528F7A /* WavePlayTests.swift */,
 				04685A9E1EB7CFA800528F7A /* Info.plist */,
 			);
@@ -219,15 +226,19 @@
 				TargetAttributes = {
 					04685A831EB7CFA300528F7A = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = V38M9976HU;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					04685A971EB7CFA700528F7A = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 04685A831EB7CFA300528F7A;
 					};
 					04685AA21EB7CFA800528F7A = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 04685A831EB7CFA300528F7A;
 					};
@@ -284,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FD5D251EBFF82F00D7FFB7 /* WaveTableViewCell.swift in Sources */,
 				044CB2AE1EBA88EF00FD55BD /* FourthViewController.swift in Sources */,
 				044CB2AA1EBA86E900FD55BD /* SecondViewController.swift in Sources */,
 				04685AB81EB7DFC100528F7A /* TabBarController.swift in Sources */,
@@ -293,6 +305,7 @@
 				04685A881EB7CFA400528F7A /* AppDelegate.swift in Sources */,
 				044CB2B21EBA99E200FD55BD /* RulesViewController.swift in Sources */,
 				04685AB61EB7D0BA00528F7A /* FirstViewController.swift in Sources */,
+				04FD5D211EBD195300D7FFB7 /* AboutWavesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +449,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V38M9976HU;
 				INFOPLIST_FILE = WavePlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ahspadafora.WavePlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,7 +463,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V38M9976HU;
 				INFOPLIST_FILE = WavePlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ahspadafora.WavePlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";

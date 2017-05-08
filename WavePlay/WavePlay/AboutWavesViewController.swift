@@ -1,18 +1,18 @@
 //
-//  ThirdViewController.swift
+//  AboutWavesViewController.swift
 //  WavePlay
 //
-//  Created by Amber Spadafora on 5/3/17.
+//  Created by Amber Spadafora on 5/5/17.
 //  Copyright © 2017 Amber Spadafora. All rights reserved.
 //
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class AboutWavesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(hexString: "DDF3F4")
-        // Do any additional setup after loading the view.
     }
+
 }

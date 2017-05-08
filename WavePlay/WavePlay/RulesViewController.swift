@@ -12,12 +12,12 @@ class RulesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(hexString: "E4C2B9")
+        self.view.backgroundColor = UIColor(hexString: "DDF3F4")
         addSubviews()
         addConstraints()
     }
     
-    private func addSubviews(){
+    fileprivate func addSubviews(){
         grayView.translatesAutoresizingMaskIntoConstraints = false
         rulesLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -25,7 +25,7 @@ class RulesViewController: UIViewController {
         grayView.addSubview(rulesLabel)
     }
     
-    private func addConstraints(){
+    fileprivate func addConstraints(){
         let _ = [grayView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor), grayView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor), grayView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.65), grayView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.75)].map{$0.isActive = true}
         
         let _ = [rulesLabel.centerYAnchor.constraint(equalTo: (rulesLabel.superview?.centerYAnchor)!), rulesLabel.centerXAnchor.constraint(equalTo: (rulesLabel.superview?.centerXAnchor)!), rulesLabel.heightAnchor.constraint(equalTo: (rulesLabel.superview?.heightAnchor)!), rulesLabel.widthAnchor.constraint(equalTo: (rulesLabel.superview?.widthAnchor)!)].map{$0.isActive = true}
@@ -39,7 +39,7 @@ class RulesViewController: UIViewController {
     
     let rulesLabel: UITextView = {
         var textView = UITextView()
-        textView.backgroundColor = .clear
+        textView.backgroundColor = UIColor.clear
         textView.textAlignment = .center
         textView.text = "Rules \n \n \n 1.Take care of eachother \n \n"
         return textView

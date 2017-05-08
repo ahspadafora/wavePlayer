@@ -13,17 +13,17 @@ class FourthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Settings"
-        self.view.backgroundColor = UIColor(hexString: "E4C2B9")
+        self.view.backgroundColor = UIColor(hexString: "DDF3F4")
         addSubViews()
         addConstraints()
     }
     
-    private func addSubViews(){
+    fileprivate func addSubViews(){
         let _ = [rulesButton,aboutButton,pointsButton].map{self.view.addSubview($0)}
         let _ = [rulesButton,aboutButton,pointsButton].map{$0.isEnabled = true}
     }
     
-    private func addConstraints(){
+    fileprivate func addConstraints(){
         let _ = [rulesButton, aboutButton, pointsButton].map{$0.translatesAutoresizingMaskIntoConstraints = false}
         
         let _ = [rulesButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor), rulesButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor), rulesButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.85), rulesButton.heightAnchor.constraint(equalToConstant: 50)].map{$0.isActive = true}
@@ -34,9 +34,14 @@ class FourthViewController: UIViewController {
         
     }
     
-    func goToRulesPage(sender: UIButton){
+    func goToRulesPage(_ sender: UIButton){
         print("button pressed")
         self.navigationController?.pushViewController(RulesViewController(), animated: true)
+    }
+    
+    func goToAboutPage(_ sender: UIButton){
+        print("button pressed")
+        self.navigationController?.pushViewController(AboutWavesViewController(), animated: true)
     }
     
     let rulesButton: UIButton = {
@@ -53,6 +58,7 @@ class FourthViewController: UIViewController {
         button.backgroundColor = UIColor.gray
         button.setTitle("What is WavePlay?", for: .normal)
         button.titleLabel?.textColor = .black
+        button.addTarget(self, action:#selector(goToRulesPage), for: .touchUpInside)
         return button
     }()
     
