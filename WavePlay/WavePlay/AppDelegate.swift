@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let tabBar = TabBarController()
-        
+        FIRApp.configure()
         window = UIWindow()
-        window?.rootViewController = tabBar
+        
+        let tabBar = TabBarController()
+        let loginVC = LogInViewController()
+        
+        if defaults.value(forKey: "fid") == nil {
+            window?.rootViewController = loginVC
+        } else {
+            window?.rootViewController = tabBar
+        }
+        
         window?.makeKeyAndVisible()
         
         return true

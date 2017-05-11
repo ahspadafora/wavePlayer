@@ -24,6 +24,9 @@
 		04685AB81EB7DFC100528F7A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AB71EB7DFC100528F7A /* TabBarController.swift */; };
 		04FD5D211EBD195300D7FFB7 /* AboutWavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */; };
 		04FD5D251EBFF82F00D7FFB7 /* WaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */; };
+		3FF88CFD018F4675C40BA15E /* Pods_WavePlayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB45EE2CA7DCB2AAFCAE443F /* Pods_WavePlayTests.framework */; };
+		6A5DA62AA7A4084FB7D187EC /* Pods_WavePlayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96C5275D1D96353DEF429A2 /* Pods_WavePlayUITests.framework */; };
+		CB20215A3217832B95A9CBD8 /* Pods_WavePlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F425F26E282E8F1EF6E54D11 /* Pods_WavePlay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,15 @@
 		04685AB71EB7DFC100528F7A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWavesViewController.swift; sourceTree = "<group>"; };
 		04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveTableViewCell.swift; path = ../WaveTableViewCell.swift; sourceTree = "<group>"; };
+		1A8FBBBD1CBA783224B34C21 /* Pods-WavePlayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlayTests/Pods-WavePlayTests.release.xcconfig"; sourceTree = "<group>"; };
+		655A93C89DCC1B09B5D5E993 /* Pods-WavePlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlay/Pods-WavePlay.release.xcconfig"; sourceTree = "<group>"; };
+		6C0D12CCFC7CB4C8899D3C3D /* Pods-WavePlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlay/Pods-WavePlay.debug.xcconfig"; sourceTree = "<group>"; };
+		76BA74CBA7427139D6D2ED1C /* Pods-WavePlayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlayTests/Pods-WavePlayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB18D11D09429E47D8D211F6 /* Pods-WavePlayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlayUITests/Pods-WavePlayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB12346C7D159B1423995F04 /* Pods-WavePlayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlayUITests/Pods-WavePlayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EB45EE2CA7DCB2AAFCAE443F /* Pods_WavePlayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WavePlayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F425F26E282E8F1EF6E54D11 /* Pods_WavePlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WavePlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96C5275D1D96353DEF429A2 /* Pods_WavePlayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WavePlayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB20215A3217832B95A9CBD8 /* Pods_WavePlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF88CFD018F4675C40BA15E /* Pods_WavePlayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A5DA62AA7A4084FB7D187EC /* Pods_WavePlayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +123,8 @@
 				04685A861EB7CFA300528F7A /* WavePlay */,
 				04685A9B1EB7CFA700528F7A /* WavePlayTests */,
 				04685AA61EB7CFA800528F7A /* WavePlayUITests */,
+				59C8DAA1646BF7C05CE3203B /* Pods */,
+				F219A040746C14747562216B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +181,29 @@
 			path = WavePlayUITests;
 			sourceTree = "<group>";
 		};
+		59C8DAA1646BF7C05CE3203B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D12CCFC7CB4C8899D3C3D /* Pods-WavePlay.debug.xcconfig */,
+				655A93C89DCC1B09B5D5E993 /* Pods-WavePlay.release.xcconfig */,
+				76BA74CBA7427139D6D2ED1C /* Pods-WavePlayTests.debug.xcconfig */,
+				1A8FBBBD1CBA783224B34C21 /* Pods-WavePlayTests.release.xcconfig */,
+				AB18D11D09429E47D8D211F6 /* Pods-WavePlayUITests.debug.xcconfig */,
+				EB12346C7D159B1423995F04 /* Pods-WavePlayUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F219A040746C14747562216B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F425F26E282E8F1EF6E54D11 /* Pods_WavePlay.framework */,
+				EB45EE2CA7DCB2AAFCAE443F /* Pods_WavePlayTests.framework */,
+				F96C5275D1D96353DEF429A2 /* Pods_WavePlayUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04685AAC1EB7CFA800528F7A /* Build configuration list for PBXNativeTarget "WavePlay" */;
 			buildPhases = (
+				FBD343BA8314CB6F8540E460 /* [CP] Check Pods Manifest.lock */,
 				04685A801EB7CFA300528F7A /* Sources */,
 				04685A811EB7CFA300528F7A /* Frameworks */,
 				04685A821EB7CFA300528F7A /* Resources */,
+				7EFA963F9DDBFBEAEF47C68A /* [CP] Embed Pods Frameworks */,
+				CB1DEA369B68CBBB8ED0BEF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04685AAF1EB7CFA800528F7A /* Build configuration list for PBXNativeTarget "WavePlayTests" */;
 			buildPhases = (
+				BAC741D38469B4412BD3853D /* [CP] Check Pods Manifest.lock */,
 				04685A941EB7CFA700528F7A /* Sources */,
 				04685A951EB7CFA700528F7A /* Frameworks */,
 				04685A961EB7CFA700528F7A /* Resources */,
+				3F9ED5BC11ABF04FB4FB0192 /* [CP] Embed Pods Frameworks */,
+				E9D9F31E7D8DBCC1D649A07F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04685AB21EB7CFA800528F7A /* Build configuration list for PBXNativeTarget "WavePlayUITests" */;
 			buildPhases = (
+				768B214A320C7E3481A1AB48 /* [CP] Check Pods Manifest.lock */,
 				04685A9F1EB7CFA800528F7A /* Sources */,
 				04685AA01EB7CFA800528F7A /* Frameworks */,
 				04685AA11EB7CFA800528F7A /* Resources */,
+				636A836B98DD9F03A292E471 /* [CP] Embed Pods Frameworks */,
+				BEE070B115F7276C825135B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,6 +345,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F9ED5BC11ABF04FB4FB0192 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WavePlayTests/Pods-WavePlayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		636A836B98DD9F03A292E471 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WavePlayUITests/Pods-WavePlayUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		768B214A320C7E3481A1AB48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7EFA963F9DDBFBEAEF47C68A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WavePlay/Pods-WavePlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAC741D38469B4412BD3853D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BEE070B115F7276C825135B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WavePlayUITests/Pods-WavePlayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB1DEA369B68CBBB8ED0BEF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WavePlay/Pods-WavePlay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9D9F31E7D8DBCC1D649A07F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WavePlayTests/Pods-WavePlayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBD343BA8314CB6F8540E460 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04685A801EB7CFA300528F7A /* Sources */ = {
@@ -455,6 +642,7 @@
 		};
 		04685AAD1EB7CFA800528F7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C0D12CCFC7CB4C8899D3C3D /* Pods-WavePlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V38M9976HU;
@@ -469,6 +657,7 @@
 		};
 		04685AAE1EB7CFA800528F7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655A93C89DCC1B09B5D5E993 /* Pods-WavePlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V38M9976HU;
@@ -483,6 +672,7 @@
 		};
 		04685AB01EB7CFA800528F7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76BA74CBA7427139D6D2ED1C /* Pods-WavePlayTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +687,7 @@
 		};
 		04685AB11EB7CFA800528F7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A8FBBBD1CBA783224B34C21 /* Pods-WavePlayTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +702,7 @@
 		};
 		04685AB31EB7CFA800528F7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB18D11D09429E47D8D211F6 /* Pods-WavePlayUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = WavePlayUITests/Info.plist;
@@ -524,6 +716,7 @@
 		};
 		04685AB41EB7CFA800528F7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB12346C7D159B1423995F04 /* Pods-WavePlayUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = WavePlayUITests/Info.plist;
