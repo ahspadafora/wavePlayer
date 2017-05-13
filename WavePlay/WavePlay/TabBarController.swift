@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
         self.edgesForExtendedLayout = []
         
         
-        let tabOne = FirstViewController()
+        let tabOne = MainViewController()
         tabOne.edgesForExtendedLayout = []
         tabOne.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Globe Asia Filled-50"), tag: 1)
         

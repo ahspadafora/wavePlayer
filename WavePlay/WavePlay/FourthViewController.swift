@@ -12,7 +12,7 @@ class FourthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Settings"
+        //self.title = "Settings"
         self.view.backgroundColor = UIColor(hexString: "DDF3F4")
         addSubViews()
         addConstraints()
@@ -58,7 +58,7 @@ class FourthViewController: UIViewController {
         button.backgroundColor = UIColor.gray
         button.setTitle("What is WavePlay?", for: .normal)
         button.titleLabel?.textColor = .black
-        button.addTarget(self, action:#selector(goToRulesPage), for: .touchUpInside)
+        button.addTarget(self, action:#selector(goToAboutPage), for: .touchUpInside)
         return button
     }()
     

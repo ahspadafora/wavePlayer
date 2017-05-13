@@ -20,7 +20,7 @@
 		04685A921EB7CFA400528F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04685A901EB7CFA400528F7A /* LaunchScreen.storyboard */; };
 		04685A9D1EB7CFA700528F7A /* WavePlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685A9C1EB7CFA700528F7A /* WavePlayTests.swift */; };
 		04685AA81EB7CFA800528F7A /* WavePlayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AA71EB7CFA800528F7A /* WavePlayUITests.swift */; };
-		04685AB61EB7D0BA00528F7A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AB51EB7D0BA00528F7A /* FirstViewController.swift */; };
+		04685AB61EB7D0BA00528F7A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AB51EB7D0BA00528F7A /* MainViewController.swift */; };
 		04685AB81EB7DFC100528F7A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AB71EB7DFC100528F7A /* TabBarController.swift */; };
 		04FD5D211EBD195300D7FFB7 /* AboutWavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */; };
 		04FD5D251EBFF82F00D7FFB7 /* WaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */; };
@@ -66,7 +66,7 @@
 		04685AA31EB7CFA800528F7A /* WavePlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WavePlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04685AA71EB7CFA800528F7A /* WavePlayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavePlayUITests.swift; sourceTree = "<group>"; };
 		04685AA91EB7CFA800528F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04685AB51EB7D0BA00528F7A /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ../FirstViewController.swift; sourceTree = "<group>"; };
+		04685AB51EB7D0BA00528F7A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
 		04685AB71EB7DFC100528F7A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWavesViewController.swift; sourceTree = "<group>"; };
 		04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveTableViewCell.swift; path = ../WaveTableViewCell.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				044CB2B51EBA9EC400FD55BD /* extensions */,
 				044CB2AB1EBA883200FD55BD /* ThirdViewController.swift */,
 				044CB2A91EBA86E900FD55BD /* SecondViewController.swift */,
-				04685AB51EB7D0BA00528F7A /* FirstViewController.swift */,
+				04685AB51EB7D0BA00528F7A /* MainViewController.swift */,
 				0406B9B71EC47D7C00D1E096 /* LogInViewController.swift */,
 				04685A871EB7CFA400528F7A /* AppDelegate.swift */,
 				04685A8E1EB7CFA400528F7A /* Assets.xcassets */,
@@ -499,7 +499,7 @@
 				04685A881EB7CFA400528F7A /* AppDelegate.swift in Sources */,
 				0406B9B81EC47D7C00D1E096 /* LogInViewController.swift in Sources */,
 				044CB2B21EBA99E200FD55BD /* RulesViewController.swift in Sources */,
-				04685AB61EB7D0BA00528F7A /* FirstViewController.swift in Sources */,
+				04685AB61EB7D0BA00528F7A /* MainViewController.swift in Sources */,
 				04FD5D211EBD195300D7FFB7 /* AboutWavesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
