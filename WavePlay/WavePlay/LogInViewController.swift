@@ -12,6 +12,7 @@ import FirebaseAuth
 class LogInViewController: UIViewController {
     
     let handle = FIRAuth.auth()
+    var loginDelegate: LoginDelegate?
     
     let defaults = UserDefaults.standard
     //var delegate: LoginDelegate?
@@ -22,7 +23,10 @@ class LogInViewController: UIViewController {
         handle?.addStateDidChangeListener({ (auth, user) in
             if let user = user {
                 print("user uid is: \(user.uid)")
-                self.present(TabBarController(), animated: true, completion: nil)
+                self.defaults.set(user.uid, forKey: "fid")
+                print(self.defaults.string(forKey: "fid"))
+                self.loginDelegate?.logIn()
+                //self.present(TabBarController(), animated: true, completion: nil)
             }
         })
     }
@@ -35,6 +39,8 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(hexString: "DDF3F4")
         setUpSubViews()
+        let appD = UIApplication.shared.delegate as! AppDelegate
+        self.loginDelegate = appD
     }
     
     func setUpSubViews(){

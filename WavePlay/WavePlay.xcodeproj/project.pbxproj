@@ -24,6 +24,7 @@
 		04685AB81EB7DFC100528F7A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685AB71EB7DFC100528F7A /* TabBarController.swift */; };
 		04FD5D211EBD195300D7FFB7 /* AboutWavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */; };
 		04FD5D251EBFF82F00D7FFB7 /* WaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */; };
+		04FFB5391EC7E7090063EB46 /* loginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5381EC7E7090063EB46 /* loginDelegate.swift */; };
 		3FF88CFD018F4675C40BA15E /* Pods_WavePlayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB45EE2CA7DCB2AAFCAE443F /* Pods_WavePlayTests.framework */; };
 		6A5DA62AA7A4084FB7D187EC /* Pods_WavePlayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96C5275D1D96353DEF429A2 /* Pods_WavePlayUITests.framework */; };
 		CB20215A3217832B95A9CBD8 /* Pods_WavePlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F425F26E282E8F1EF6E54D11 /* Pods_WavePlay.framework */; };
@@ -70,6 +71,7 @@
 		04685AB71EB7DFC100528F7A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		04FD5D201EBD195300D7FFB7 /* AboutWavesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWavesViewController.swift; sourceTree = "<group>"; };
 		04FD5D241EBFF82F00D7FFB7 /* WaveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveTableViewCell.swift; path = ../WaveTableViewCell.swift; sourceTree = "<group>"; };
+		04FFB5381EC7E7090063EB46 /* loginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginDelegate.swift; sourceTree = "<group>"; };
 		1A8FBBBD1CBA783224B34C21 /* Pods-WavePlayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlayTests/Pods-WavePlayTests.release.xcconfig"; sourceTree = "<group>"; };
 		655A93C89DCC1B09B5D5E993 /* Pods-WavePlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlay/Pods-WavePlay.release.xcconfig"; sourceTree = "<group>"; };
 		6C0D12CCFC7CB4C8899D3C3D /* Pods-WavePlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavePlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WavePlay/Pods-WavePlay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				044CB2A91EBA86E900FD55BD /* SecondViewController.swift */,
 				04685AB51EB7D0BA00528F7A /* MainViewController.swift */,
 				0406B9B71EC47D7C00D1E096 /* LogInViewController.swift */,
+				04FFB5381EC7E7090063EB46 /* loginDelegate.swift */,
 				04685A871EB7CFA400528F7A /* AppDelegate.swift */,
 				04685A8E1EB7CFA400528F7A /* Assets.xcassets */,
 				04685A901EB7CFA400528F7A /* LaunchScreen.storyboard */,
@@ -494,6 +497,7 @@
 				044CB2AA1EBA86E900FD55BD /* SecondViewController.swift in Sources */,
 				04685AB81EB7DFC100528F7A /* TabBarController.swift in Sources */,
 				044CB2B01EBA967900FD55BD /* SettingsNavigationViewController.swift in Sources */,
+				04FFB5391EC7E7090063EB46 /* loginDelegate.swift in Sources */,
 				044CB2AC1EBA883200FD55BD /* ThirdViewController.swift in Sources */,
 				044CB2B41EBA9D8600FD55BD /* UIColor+extensions.swift in Sources */,
 				04685A881EB7CFA400528F7A /* AppDelegate.swift in Sources */,

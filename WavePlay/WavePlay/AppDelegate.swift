@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, LoginDelegate {
 
     var window: UIWindow?
     let defaults = UserDefaults.standard
@@ -19,19 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         window = UIWindow()
-        
         let tabBar = TabBarController()
-        let loginVC = LogInViewController()
         
-        if defaults.value(forKey: "fid") == nil {
-            window?.rootViewController = loginVC
-        } else {
+        if self.defaults.value(forKey: "fid") != nil {
             window?.rootViewController = tabBar
+            window?.makeKeyAndVisible()
+        } else {
+            let loginVC = LogInViewController()
+            window?.rootViewController = loginVC
+            window?.makeKeyAndVisible()
+            
         }
-        
-        window?.makeKeyAndVisible()
-        
         return true
+    }
+    
+    func logIn() {
+        let tabBar = TabBarController()
+        window?.rootViewController = tabBar
+        window?.makeKeyAndVisible()
     }
 
 
