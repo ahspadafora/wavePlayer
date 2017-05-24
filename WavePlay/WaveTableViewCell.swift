@@ -14,16 +14,11 @@ class WaveTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.contentView.isUserInteractionEnabled = true
-        self.contentView.addSubview(playWaveBttn)
-        self.contentView.addSubview(viewPostBttn)
-        self.contentView.addSubview(recordWaveBttn)
-        self.contentView.addSubview(playLabel)
-        self.contentView.addSubview(recordLabel)
-        
         self.contentView.backgroundColor = .clear
+
+        let _ = [playWaveBttn, viewPostBttn, recordWaveBttn, playLabel, recordLabel].map{self.contentView.addSubview($0)}
+        
         setSubViewConstraints()
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -69,7 +64,7 @@ class WaveTableViewCell: UITableViewCell {
         return label
     }()
     
-    private var playWaveBttn: UIButton = {
+    var playWaveBttn: UIButton = {
         let bttn = UIButton()
         //bttn.setImage(play, for: .normal)
         bttn.setBackgroundImage(#imageLiteral(resourceName: "playWave"), for: .normal)
@@ -77,20 +72,19 @@ class WaveTableViewCell: UITableViewCell {
         return bttn
     }()
     
-    private var recordWaveBttn: UIButton = {
+    var recordWaveBttn: UIButton = {
         let bttn = UIButton()
         bttn.setBackgroundImage(#imageLiteral(resourceName: "recordWave"), for: .normal)
         bttn.isUserInteractionEnabled = true
         return bttn
     }()
     
-    private var viewPostBttn: UIButton = {
+    var viewPostBttn: UIButton = {
         let bttn = UIButton(type: UIButtonType.custom)
         bttn.setTitle("View Post", for: .normal)
         bttn.isUserInteractionEnabled = true
         bttn.setTitleColor(UIColor.darkGray, for: .normal)
         bttn.titleLabel?.font = UIFont(name: "Avenir-Book", size: 12.0)
-        
         return bttn
     }()
     

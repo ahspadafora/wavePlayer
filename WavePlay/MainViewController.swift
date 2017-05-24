@@ -7,17 +7,32 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
+    var settings = [String: Int]()
+    var meterTimer:Timer!
+    var permissionToRecord: Bool = false
+    var isRecording: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getAudioRecordingPermission()
         self.view.backgroundColor = UIColor(hexString: "DDF3F4")
+        
+        let alertController = UIAlertController(title: "Permission to record", message: "When prompted, please give permission to record in order to send a wave", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Permission to record", style: .default, handler: nil)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
         
         waveTableView.delaysContentTouches = false
         addSubviews()
         addConstraints()
         setUpWaveTableView()
+        
     }
     
     func addSubviews(){
@@ -34,6 +49,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let _ = [localWavesButton, randomWavesButton].map{leftLabelStackView.addArrangedSubview($0)}
         let _ = [highestRatedButton, mostRecentWavesBttn].map{rightLabelStackView.addArrangedSubview($0)}
     }
+    
     func addConstraints(){
         let _ = [waveTableView, logoImageView, recordWaveBttn, topView, leftLabelStackView, localWavesButton, randomWavesButton, rightLabelStackView, highestRatedButton, mostRecentWavesBttn, showLabel, filterByLabel].map{$0.translatesAutoresizingMaskIntoConstraints = false}
         
@@ -43,9 +59,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let _ = [recordWaveBttn.heightAnchor.constraint(equalTo: topView.heightAnchor, multiplier: 0.45), recordWaveBttn.widthAnchor.constraint(equalTo: recordWaveBttn.heightAnchor), recordWaveBttn.centerXAnchor.constraint(equalTo: topView.centerXAnchor), recordWaveBttn.centerYAnchor.constraint(equalTo: topView.centerYAnchor)].map{$0.isActive = true}
         
-        let _ = [leftLabelStackView.trailingAnchor.constraint(equalTo: recordWaveBttn.leadingAnchor), leftLabelStackView.centerYAnchor.constraint(equalTo: recordWaveBttn.centerYAnchor), leftLabelStackView.leadingAnchor.constraint(equalTo: topView.leadingAnchor)].map{$0.isActive = true}
+        let _ = [leftLabelStackView.trailingAnchor.constraint(equalTo: recordWaveBttn.leadingAnchor), leftLabelStackView.centerYAnchor.constraint(equalTo: recordWaveBttn.centerYAnchor), leftLabelStackView.leadingAnchor.constraint(equalTo: topView.leadingAnchor, constant: 8.0)].map{$0.isActive = true}
         
-        let _ = [rightLabelStackView.leadingAnchor.constraint(equalTo: recordWaveBttn.trailingAnchor), rightLabelStackView.centerYAnchor.constraint(equalTo: recordWaveBttn.centerYAnchor), rightLabelStackView.trailingAnchor.constraint(equalTo: topView.trailingAnchor)].map{$0.isActive = true}
+        let _ = [rightLabelStackView.leadingAnchor.constraint(equalTo: recordWaveBttn.trailingAnchor), rightLabelStackView.centerYAnchor.constraint(equalTo: recordWaveBttn.centerYAnchor), rightLabelStackView.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: -8.0)].map{$0.isActive = true}
         
         let _ = [filterByLabel.bottomAnchor.constraint(equalTo: rightLabelStackView.topAnchor), filterByLabel.widthAnchor.constraint(equalTo: rightLabelStackView.widthAnchor), filterByLabel.leadingAnchor.constraint(equalTo: rightLabelStackView.leadingAnchor), filterByLabel.trailingAnchor.constraint(equalTo: rightLabelStackView.trailingAnchor)].map{$0.isActive = true}
         
@@ -58,20 +74,52 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         waveTableView.register(WaveTableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+    func playBttnPressed(_ sender: AnyObject){
+        print("play bttn pressed on row: \(sender.tag)")
+    }
+    
+    func recBttnPressed(_ sender: AnyObject){
+        print("rec bttn pressed on row: \(sender.tag)")
+        var send = sender as! UIButton
+        if self.audioRecorder == nil {
+            startRecording()
+            send.isSelected = true
+            send.setImage(#imageLiteral(resourceName: "stopRecordingWave"), for: .selected)
+        } else {
+            self.recordWaveBttn.isSelected = false
+            finishAudioRecording(success: true)
+            send.isSelected = false
+            send.setImage(#imageLiteral(resourceName: "recordWave"), for: .normal)
+        }
+    }
+    
+    func viewPostBttnPressed(_ sender: AnyObject){
+        print("view Post bttn pressed on row: \(sender.tag)")
+    }
+    
+    // MARK: - TableView Delegate Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     
-    // MARK: - TableView Delegate Methods
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let row = indexPath.row
         let cell = waveTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WaveTableViewCell
         cell.backgroundColor = .clear
         cell.contentView.isUserInteractionEnabled = true
+        let _ = [cell.recordWaveBttn, cell.playWaveBttn, cell.viewPostBttn].map{$0.tag = row}
+        
+        cell.playWaveBttn.addTarget(self, action: #selector(playBttnPressed), for: .touchUpInside)
+        cell.recordWaveBttn.addTarget(self, action: #selector(recBttnPressed), for: .touchUpInside)
+        cell.viewPostBttn.addTarget(self, action: #selector(viewPostBttnPressed), for: .touchUpInside)
+        
         return cell
     }
     
@@ -84,7 +132,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var waveTableView: UITableView = {
         let view = UITableView()
         view.backgroundColor = UIColor.clear
-        view.separatorStyle = UITableViewCellSeparatorStyle.none
+        view.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         return view
     }()
     
@@ -97,6 +145,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var recordWaveBttn: UIButton = {
         let bttn = UIButton(type: .custom)
         bttn.setBackgroundImage(UIImage(named: "recordWave"), for: .normal)
+        bttn.setImage(#imageLiteral(resourceName: "stopRecordingWave"), for: UIControlState.selected)
         return bttn
     }()
     
@@ -114,14 +163,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }()
     private var leftLabelStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.alignment = .center
+        stackView.alignment = .leading
         stackView.axis = .vertical
         return stackView
     }()
     
     private var rightLabelStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.alignment = .center
+        stackView.alignment = .trailing
         stackView.axis = .vertical
         return stackView
     }()
@@ -140,18 +189,75 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var filterByLabel: UILabel = {
         let label = UILabel()
         label.text = "Filter By"
-        label.textAlignment = .center
+        label.textAlignment = .right
         return label
     }()
     
     private var showLabel: UILabel = {
         let label = UILabel()
         label.text = "Show"
-        label.textAlignment = .center
+        label.textAlignment = .left
         return label
     }()
 }
 
+extension MainViewController: AVAudioRecorderDelegate {
+    
+    func startRecording() {
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        
+        let audioFileUrl = MainViewController.getAudioFileURL()
+        print(audioFileUrl.absoluteString)
+        
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFileUrl, settings: settings)
+            audioRecorder.delegate = self
+            audioRecorder.record()
+        } catch {
+            finishAudioRecording(success: false)
+        }
+    }
+    
+    class func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    class func getAudioFileURL() -> URL {
+        return getDocumentsDirectory().appendingPathComponent("testSound1.m4a")
+    }
+    
+    func finishAudioRecording(success: Bool) {
+        
+        audioRecorder.stop()
+        audioRecorder = nil
+        //meterTimer.invalidate()
+        
+        if success {
+            print("Recording finished successfully.")
+        } else {
+            print("Recording failed :(")
+        }
+    }
+    
+    func getAudioRecordingPermission(){
+        AVAudioSession.sharedInstance().requestRecordPermission { (accessGranted) in
+            if accessGranted {
+                self.permissionToRecord = true
+            } else {
+                self.permissionToRecord = false
+            }
+        }
+    }
+
+    
+}
 
 
 

@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginDelegate {
             let loginVC = LogInViewController()
             window?.rootViewController = loginVC
             window?.makeKeyAndVisible()
-            
         }
         return true
     }

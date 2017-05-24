@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0406B9B81EC47D7C00D1E096 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406B9B71EC47D7C00D1E096 /* LogInViewController.swift */; };
 		0406B9BA1EC47ED000D1E096 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0406B9B91EC47ED000D1E096 /* GoogleService-Info.plist */; };
+		04098B791ECC108A00ED37CD /* recordingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04098B781ECC108A00ED37CD /* recordingFactory.swift */; };
 		044CB2AA1EBA86E900FD55BD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044CB2A91EBA86E900FD55BD /* SecondViewController.swift */; };
 		044CB2AC1EBA883200FD55BD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044CB2AB1EBA883200FD55BD /* ThirdViewController.swift */; };
 		044CB2AE1EBA88EF00FD55BD /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044CB2AD1EBA88EF00FD55BD /* FourthViewController.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		0406B9B71EC47D7C00D1E096 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0406B9B91EC47ED000D1E096 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04098B781ECC108A00ED37CD /* recordingFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordingFactory.swift; sourceTree = "<group>"; };
 		044CB2A91EBA86E900FD55BD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		044CB2AB1EBA883200FD55BD /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		044CB2AD1EBA88EF00FD55BD /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				044CB2AB1EBA883200FD55BD /* ThirdViewController.swift */,
 				044CB2A91EBA86E900FD55BD /* SecondViewController.swift */,
 				04685AB51EB7D0BA00528F7A /* MainViewController.swift */,
+				04098B781ECC108A00ED37CD /* recordingFactory.swift */,
 				0406B9B71EC47D7C00D1E096 /* LogInViewController.swift */,
 				04FFB5381EC7E7090063EB46 /* loginDelegate.swift */,
 				04685A871EB7CFA400528F7A /* AppDelegate.swift */,
@@ -494,6 +497,7 @@
 			files = (
 				04FD5D251EBFF82F00D7FFB7 /* WaveTableViewCell.swift in Sources */,
 				044CB2AE1EBA88EF00FD55BD /* FourthViewController.swift in Sources */,
+				04098B791ECC108A00ED37CD /* recordingFactory.swift in Sources */,
 				044CB2AA1EBA86E900FD55BD /* SecondViewController.swift in Sources */,
 				04685AB81EB7DFC100528F7A /* TabBarController.swift in Sources */,
 				044CB2B01EBA967900FD55BD /* SettingsNavigationViewController.swift in Sources */,
